@@ -7,6 +7,9 @@
 //
 
 #import "SetReservationVC.h"
+#import "Reservation.h"
+#import "Guest.h"
+#import "HotelService.h"
 
 @interface SetReservationVC ()
 
@@ -37,18 +40,25 @@
   reservation.startDate = self.startDatePicker.date;
   reservation.endDate = self.endDatePicker.date;
   reservation.room = self.selectedRoom;
-  Guest *guest = [NSEntityDescription insertNewObjectForEntityForName:@"Guest" inManagedObjectContext:self.selectedRoom.managedObjectContext];
-  reservation.guest = guest;
-  
-  NSLog(@"%lu", (unsigned long) self.selectedRoom.reservations.count);
   
   
-  NSerror *saveError;
-  [self.selectedRoom.managedObjectContext save: &saveError]
+  Guest *guest = [NSEntityDescription insertNewObjectForEntityForName:@"Guest" inManagedObjectContext:
+                  [[HotelService sharedService] coreDataStack].managedObjectContext];
+  guest.firstName = @"FirstName";
+  guest.lastName = @"LastName";
   
-  if (saveError) {
-    NSLog(@" %@", saveError.localizedDescription);
-  }
+  [[HotelService sharedService] bookReservationForGuest:guest ForRoom:self.selectedRoom startDate:self.startDatePicker.date endDate:self.endDatePicker.date];
+  
+  [self dismissViewControllerAnimated:true completion:nil];
+ 
+  
+//  
+//  NSError *saveError;
+//  [self.selectedRoom.managedObjectContext save: &saveError];
+//  
+//  if (saveError) {
+//    NSLog(@" %@", saveError.localizedDescription);
+//  }
   
 }
 

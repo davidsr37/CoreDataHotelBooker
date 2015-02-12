@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "Hotel.h"
 #import "RoomsTVC.h"
+#import "HotelService.h"
 
 @interface ViewController () <UITableViewDataSource>
 

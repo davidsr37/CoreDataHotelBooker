@@ -12,6 +12,7 @@
 #import "Room.h"
 //#import "CoreDataHelper.h"
 #import "SetReservationVC.h"
+#import "ReservationListVC.h"
 
 @interface RoomsTVC () <UITableViewDataSource>
 
@@ -85,7 +86,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
   if ([segue.identifier isEqualToString:@"SHOW_RESERV"]) {
     
-    SetReservationVC *destinationVC = segue.destinationViewController;
+    ReservationListVC *destinationVC = segue.destinationViewController;
     NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
     Room *room = self.rooms[indexPath.row];
     destinationVC.selectedRoom = room;

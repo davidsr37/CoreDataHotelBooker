@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Hotel.h"
 
 @interface RoomsTVC : UITableViewController
 
-@property (strong, nonatomic) NSArray *selectedHotel;
+@property (strong, nonatomic) Hotel *selectedHotel;
 
 @end

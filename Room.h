@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "Reservation.h"
 
-@class Hotel, Reservation;
+@class Hotel;
 
 @interface Room : NSManagedObject
 
