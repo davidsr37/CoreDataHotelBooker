@@ -23,10 +23,10 @@
   self = [super init];
   if (self) {
     self.size = size;
-    self.hashArray = [NSMutableArray new];
+    self.hashArray = [[NSMutableArray alloc] init];
     
     for (int i = 0; i <self.size; i++) {
-      Bucket *bucket = [Bucket new];
+      Bucket *bucket = [[Bucket alloc] init];
       [self.hashArray addObject:bucket];
     }
   }
@@ -70,7 +70,7 @@
       if (!previousBucket) {
         Bucket *nextBucket = bucket.next;
         if (!nextBucket) {
-          nextBucket = [Bucket new];
+          nextBucket = [[Bucket alloc] init];
         }
         self.hashArray[index] = nextBucket;
       } else {
@@ -86,7 +86,7 @@
 
 -(void)setObject:(id) object forKey:(NSString*)key {
   NSInteger index = [self hash:key];
-  Bucket *bucket = [Bucket new];
+  Bucket *bucket = [[Bucket alloc]init];
   bucket.key = key;
   bucket.data = object;
   

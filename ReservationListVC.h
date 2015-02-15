@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Room.h"
 
-@interface ReservationListVC : UIViewController
+@interface ReservationListVC : UITableViewController
 
 @property (strong, nonatomic) Room *selectedRoom;
 

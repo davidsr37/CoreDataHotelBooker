@@ -15,7 +15,7 @@
   static HotelService *mySharedService = nil;
   static dispatch_once_t onceToken;
   dispatch_once(&onceToken, ^{
-    mySharedService = [self new];
+    mySharedService = [[self alloc] init];
   });
   
   return mySharedService;
@@ -24,7 +24,7 @@
 -(instancetype)init {
   self = [super init];
   if (self) {
-    self.coreDataStack = [CoreDataStack new];
+    self.coreDataStack = [[CoreDataStack alloc]init];
   
   }
   

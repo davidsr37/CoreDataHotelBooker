@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C4AF8941A8D263400285C0D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4AF8931A8D263400285C0D /* CloudKit.framework */; };
 		9C4AF8971A8D2BF700285C0D /* HashTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4AF8961A8D2BF700285C0D /* HashTable.m */; };
 		9C4AF89A1A8D2D8600285C0D /* Bucket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4AF8991A8D2D8600285C0D /* Bucket.m */; };
 		9C5719721A892585009D317C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5719711A892585009D317C /* main.m */; };
 		9C5719751A892585009D317C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5719741A892585009D317C /* AppDelegate.m */; };
 		9C5719781A892585009D317C /* CoreDataDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C5719761A892585009D317C /* CoreDataDemo.xcdatamodeld */; };
-		9C57197B1A892585009D317C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C57197A1A892585009D317C /* ViewController.m */; };
+		9C57197B1A892585009D317C /* HotelsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C57197A1A892585009D317C /* HotelsVC.m */; };
 		9C57197E1A892585009D317C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C57197C1A892585009D317C /* Main.storyboard */; };
 		9C5719801A892585009D317C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C57197F1A892585009D317C /* Images.xcassets */; };
 		9C5719831A892585009D317C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C5719811A892585009D317C /* LaunchScreen.xib */; };
@@ -24,6 +23,7 @@
 		9C5719A71A89395C009D317C /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5719A61A89395C009D317C /* Room.m */; };
 		9C5719A91A894F29009D317C /* seed.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C5719A81A894F29009D317C /* seed.json */; };
 		9C5719AF1A896544009D317C /* RoomsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5719AE1A896544009D317C /* RoomsTVC.m */; };
+		9C578B6C1A908FF000AFDFB4 /* MainMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C578B6B1A908FF000AFDFB4 /* MainMenuVC.m */; };
 		9C5E9F151A8A7AFB006D29D8 /* SetReservationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5E9F141A8A7AFB006D29D8 /* SetReservationVC.m */; };
 		9C8B64751A8BCDB8002BB6BF /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8B64741A8BCDB8002BB6BF /* CoreDataStack.m */; };
 		9C8B64781A8BCF2E002BB6BF /* HotelService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8B64771A8BCF2E002BB6BF /* HotelService.m */; };
@@ -44,19 +44,18 @@
 
 /* Begin PBXFileReference section */
 		9C4AF8921A8D262A00285C0D /* CoreDataDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CoreDataDemo.entitlements; sourceTree = "<group>"; };
-		9C4AF8931A8D263400285C0D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		9C4AF8951A8D2BF700285C0D /* HashTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HashTable.h; sourceTree = "<group>"; };
-		9C4AF8961A8D2BF700285C0D /* HashTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HashTable.m; sourceTree = "<group>"; };
-		9C4AF8981A8D2D8600285C0D /* Bucket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bucket.h; sourceTree = "<group>"; };
-		9C4AF8991A8D2D8600285C0D /* Bucket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bucket.m; sourceTree = "<group>"; };
+		9C4AF8951A8D2BF700285C0D /* HashTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HashTable.h; path = ../HashTable.h; sourceTree = "<group>"; };
+		9C4AF8961A8D2BF700285C0D /* HashTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HashTable.m; path = ../HashTable.m; sourceTree = "<group>"; };
+		9C4AF8981A8D2D8600285C0D /* Bucket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bucket.h; path = ../Bucket.h; sourceTree = "<group>"; };
+		9C4AF8991A8D2D8600285C0D /* Bucket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bucket.m; path = ../Bucket.m; sourceTree = "<group>"; };
 		9C57196C1A892585009D317C /* CoreDataDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C5719701A892585009D317C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C5719711A892585009D317C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9C5719731A892585009D317C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = CoreDataDemo/AppDelegate.h; sourceTree = "<group>"; };
 		9C5719741A892585009D317C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = CoreDataDemo/AppDelegate.m; sourceTree = "<group>"; };
 		9C5719771A892585009D317C /* CoreDataDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataDemo.xcdatamodel; sourceTree = "<group>"; };
-		9C5719791A892585009D317C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = CoreDataDemo/ViewController.h; sourceTree = "<group>"; };
-		9C57197A1A892585009D317C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = CoreDataDemo/ViewController.m; sourceTree = "<group>"; };
+		9C5719791A892585009D317C /* HotelsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HotelsVC.h; path = CoreDataDemo/HotelsVC.h; sourceTree = "<group>"; };
+		9C57197A1A892585009D317C /* HotelsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HotelsVC.m; path = CoreDataDemo/HotelsVC.m; sourceTree = "<group>"; };
 		9C57197D1A892585009D317C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C57197F1A892585009D317C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9C5719821A892585009D317C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -74,10 +73,12 @@
 		9C5719A81A894F29009D317C /* seed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = seed.json; sourceTree = "<group>"; };
 		9C5719AD1A896544009D317C /* RoomsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomsTVC.h; sourceTree = "<group>"; };
 		9C5719AE1A896544009D317C /* RoomsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomsTVC.m; sourceTree = "<group>"; };
+		9C578B6A1A908FF000AFDFB4 /* MainMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuVC.h; sourceTree = "<group>"; };
+		9C578B6B1A908FF000AFDFB4 /* MainMenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuVC.m; sourceTree = "<group>"; };
 		9C5E9F131A8A7AFB006D29D8 /* SetReservationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetReservationVC.h; path = CoreDataDemo/SetReservationVC.h; sourceTree = "<group>"; };
 		9C5E9F141A8A7AFB006D29D8 /* SetReservationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetReservationVC.m; path = CoreDataDemo/SetReservationVC.m; sourceTree = "<group>"; };
-		9C8B64731A8BCDB8002BB6BF /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
-		9C8B64741A8BCDB8002BB6BF /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		9C8B64731A8BCDB8002BB6BF /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataStack.h; path = ../CoreDataStack.h; sourceTree = "<group>"; };
+		9C8B64741A8BCDB8002BB6BF /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataStack.m; path = ../CoreDataStack.m; sourceTree = "<group>"; };
 		9C8B64761A8BCF2E002BB6BF /* HotelService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelService.h; sourceTree = "<group>"; };
 		9C8B64771A8BCF2E002BB6BF /* HotelService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelService.m; sourceTree = "<group>"; };
 		9C8B64791A8BD633002BB6BF /* HotelServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HotelServiceTests.m; path = ../HotelServiceTests.m; sourceTree = "<group>"; };
@@ -92,7 +93,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C4AF8941A8D263400285C0D /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +109,6 @@
 		9C5719631A892585009D317C = {
 			isa = PBXGroup;
 			children = (
-				9C4AF8931A8D263400285C0D /* CloudKit.framework */,
 				9C57196E1A892585009D317C /* CoreDataDemo */,
 				9C57198B1A892585009D317C /* CoreDataDemoTests */,
 				9C57196D1A892585009D317C /* Products */,
@@ -167,6 +166,12 @@
 		9C5719A41A8931FD009D317C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9C8B64731A8BCDB8002BB6BF /* CoreDataStack.h */,
+				9C8B64741A8BCDB8002BB6BF /* CoreDataStack.m */,
+				9C4AF8951A8D2BF700285C0D /* HashTable.h */,
+				9C4AF8961A8D2BF700285C0D /* HashTable.m */,
+				9C4AF8981A8D2D8600285C0D /* Bucket.h */,
+				9C4AF8991A8D2D8600285C0D /* Bucket.m */,
 				9C5719761A892585009D317C /* CoreDataDemo.xcdatamodeld */,
 				9C5719A81A894F29009D317C /* seed.json */,
 				9C57199B1A8931EE009D317C /* Hotel.h */,
@@ -186,24 +191,20 @@
 			children = (
 				9C5719731A892585009D317C /* AppDelegate.h */,
 				9C5719741A892585009D317C /* AppDelegate.m */,
-				9C5719791A892585009D317C /* ViewController.h */,
-				9C57197A1A892585009D317C /* ViewController.m */,
-				9CF9C9B91A8B359800311F77 /* AvailabilityVC.h */,
-				9CF9C9BA1A8B359800311F77 /* AvailabilityVC.m */,
-				9C8B64731A8BCDB8002BB6BF /* CoreDataStack.h */,
-				9C4AF8951A8D2BF700285C0D /* HashTable.h */,
-				9C4AF8961A8D2BF700285C0D /* HashTable.m */,
-				9C4AF8981A8D2D8600285C0D /* Bucket.h */,
-				9C4AF8991A8D2D8600285C0D /* Bucket.m */,
-				9C8B64741A8BCDB8002BB6BF /* CoreDataStack.m */,
-				9C8B64761A8BCF2E002BB6BF /* HotelService.h */,
-				9C8B64771A8BCF2E002BB6BF /* HotelService.m */,
+				9C578B6A1A908FF000AFDFB4 /* MainMenuVC.h */,
+				9C578B6B1A908FF000AFDFB4 /* MainMenuVC.m */,
+				9C5719791A892585009D317C /* HotelsVC.h */,
+				9C57197A1A892585009D317C /* HotelsVC.m */,
 				9C5719AD1A896544009D317C /* RoomsTVC.h */,
 				9C5719AE1A896544009D317C /* RoomsTVC.m */,
 				9C5E9F131A8A7AFB006D29D8 /* SetReservationVC.h */,
 				9C5E9F141A8A7AFB006D29D8 /* SetReservationVC.m */,
 				9CF1F0191A8C6A310006E700 /* ReservationListVC.h */,
 				9CF1F01A1A8C6A310006E700 /* ReservationListVC.m */,
+				9CF9C9B91A8B359800311F77 /* AvailabilityVC.h */,
+				9CF9C9BA1A8B359800311F77 /* AvailabilityVC.m */,
+				9C8B64761A8BCF2E002BB6BF /* HotelService.h */,
+				9C8B64771A8BCF2E002BB6BF /* HotelService.m */,
 			);
 			name = Controllers;
 			path = ..;
@@ -271,7 +272,7 @@
 						DevelopmentTeam = 5FT7VK27DP;
 						SystemCapabilities = {
 							com.apple.iCloud = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -329,11 +330,12 @@
 				9C5719A01A8931EE009D317C /* Reservation.m in Sources */,
 				9C4AF89A1A8D2D8600285C0D /* Bucket.m in Sources */,
 				9C57199D1A8931EE009D317C /* Hotel.m in Sources */,
+				9C578B6C1A908FF000AFDFB4 /* MainMenuVC.m in Sources */,
 				9C8B64781A8BCF2E002BB6BF /* HotelService.m in Sources */,
 				9C5719A31A8931EE009D317C /* Guest.m in Sources */,
 				9C5719751A892585009D317C /* AppDelegate.m in Sources */,
 				9C5719781A892585009D317C /* CoreDataDemo.xcdatamodeld in Sources */,
-				9C57197B1A892585009D317C /* ViewController.m in Sources */,
+				9C57197B1A892585009D317C /* HotelsVC.m in Sources */,
 				9CF1F01B1A8C6A310006E700 /* ReservationListVC.m in Sources */,
 				9CF9C9BB1A8B359800311F77 /* AvailabilityVC.m in Sources */,
 				9C5E9F151A8A7AFB006D29D8 /* SetReservationVC.m in Sources */,
@@ -464,7 +466,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CoreDataDemo/CoreDataDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CoreDataDemo/Info.plist;
@@ -479,7 +480,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CoreDataDemo/CoreDataDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CoreDataDemo/Info.plist;

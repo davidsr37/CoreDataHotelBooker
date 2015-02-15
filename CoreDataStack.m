@@ -10,11 +10,86 @@
 #import "Hotel.h"
 #import "Room.h"
 
+@interface CoreDataStack()
+
+@property (nonatomic) BOOL isTesting;
+
+@end
+
 @implementation CoreDataStack
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+
+
+-(instancetype)initForTesting {
+  self = [super init];
+  if (self) {
+    self.isTesting = true;
+  
+  }
+  
+  return self;
+  
+}
+
+-(instancetype)init{
+  self = [super init];
+  if (self) {
+    [self seedDataBaseIfNeeded];
+    
+  }
+  
+  return self;
+  
+}
+
+-(void)seedDataBaseIfNeeded {
+  
+  NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Hotel"];
+  NSError *fetchError;
+  
+  NSInteger results = [self.managedObjectContext countForFetchRequest:fetchRequest error:&fetchError];
+  NSLog(@" %ld", (long) results);
+  if (results == 0) {
+    NSURL *seedURL = [[NSBundle mainBundle] URLForResource:@"seed" withExtension:@"json"];
+    NSData *seedData = [[NSData alloc] initWithContentsOfURL:seedURL];
+    NSError *jsonError;
+    NSDictionary *rootDictionary = [NSJSONSerialization JSONObjectWithData:seedData options:0 error:&jsonError];
+    if (!jsonError) {
+      NSArray *jsonArray = rootDictionary[@"Hotel"];
+      
+      for (NSDictionary *hotelDictionary in jsonArray) {
+        Hotel *hotel = [NSEntityDescription insertNewObjectForEntityForName:@"Hotel" inManagedObjectContext:self.managedObjectContext];
+        hotel.name = hotelDictionary[@"name"];
+        hotel.rating = hotelDictionary[@"stars"];
+        hotel.locations = hotelDictionary[@"location"];
+        
+        NSArray *roomsArray = hotelDictionary[@"rooms"];
+        for (NSDictionary *roomDictionary in roomsArray) {
+          Room *room = [NSEntityDescription insertNewObjectForEntityForName:@"Room"
+            inManagedObjectContext:self.managedObjectContext];
+          room.number = roomDictionary[@"number"];
+          room.beds = roomDictionary[@"beds"];
+          room.rate = roomDictionary[@"rate"];
+          room.hotel = hotel;
+          
+        }
+      }
+      
+      NSError *saveError;
+      [self.managedObjectContext save:&saveError];
+      
+      if (saveError) {
+        NSLog(@"%@",saveError.localizedDescription);
+      }
+      
+    }
+    
+  }
+  
+}
 
 - (NSURL *)applicationDocumentsDirectory {
   // The directory the application uses to store the Core Data store file. This code uses a directory named "davidsamuelrogers-gmail.com.CoreDataDemo" in the application's documents directory.

@@ -1,7 +1,7 @@
 {
     "Hotels": [
     {
-                "name" : "Fancy Estates",
+                "name" : "BestWest",
                 "location" : "Downtown",
                 "stars" : 4,
                 "rooms" : [
@@ -69,7 +69,7 @@
                            ]
                 },
                 {
-                "name" : "Decent Inn",
+                "name" : "EcoLodge",
                 "location" : "Pioneer Square",
                 "stars" : 3,
                 "rooms" : [

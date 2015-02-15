@@ -6,20 +6,20 @@
 //  Copyright (c) 2015 David Rogers. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "HotelsVC.h"
 #import "AppDelegate.h"
 #import "Hotel.h"
 #import "RoomsTVC.h"
 #import "HotelService.h"
 
-@interface ViewController () <UITableViewDataSource>
+@interface HotelsVC () <UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *hotels;
 
 @end
 
-@implementation ViewController
+@implementation HotelsVC
 
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -28,8 +28,8 @@
   self.tableView.dataSource = self;
  // self.tableView.delegate = self;
   
-  AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-  NSManagedObjectContext *context = appDelegate.managedObjectContext;
+  CoreDataStack *coreDataStackDelegate = [UIApplication sharedApplication].delegate;
+  NSManagedObjectContext *context = coreDataStackDelegate.managedObjectContext;
   
 //  NSManagedObjectContext *MOM = [context.persistentStoreCoordinator.managedObjectModel];
   

@@ -52,7 +52,7 @@
   
   NSArray *results = [self.context executeFetchRequest:reservationFetch error:&fetchError];
   
-  NSMutableArray *rooms = [NSMutableArray new];
+  NSMutableArray *rooms = [[NSMutableArray alloc] init];
   for (Reservation *reservation in results) {
     [rooms addObject:reservation.room];
   }

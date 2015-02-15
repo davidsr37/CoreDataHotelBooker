@@ -30,8 +30,8 @@
   
   self.hotelService = [[HotelService alloc] initForTesting];
   self.hotel = [NSEntityDescription insertNewObjectForEntityForName:@"Hotel" inManagedObjectContext:self.hotelService.coreDataStack.managedObjectContext];
-  self.hotel.name = @"Test Hotel";
-  self.hotel.locations = @"Test Location";
+  self.hotel.name = @"TestHotel";
+  self.hotel.locations = @"TestLocation";
   self.hotel.rating = @1;
   
   self.room = [NSEntityDescription insertNewObjectForEntityForName:@"Room" inManagedObjectContext:self.hotelService.coreDataStack.managedObjectContext];
@@ -42,7 +42,7 @@
   
   self.guest = [NSEntityDescription insertNewObjectForEntityForName:@"Guest" inManagedObjectContext:self.hotelService.coreDataStack.managedObjectContext];
   self.guest.firstName = @"Testa";
-  self.guest.lastName = @"Testberg";
+  self.guest.lastName = @"Testbergenshlauf";
   
 }
 
@@ -60,7 +60,7 @@
   
   NSDate *startDate = [NSDate date];
   NSCalendar *calendar = [NSCalendar currentCalendar];
-  NSDateComponents *components = [NSDateComponents new];
+  NSDateComponents *components = [[NSDateComponents alloc]init];
   components.day = 2;
   NSDate *endDate = [calendar dateByAddingComponents:components toDate:startDate options:0];
   
